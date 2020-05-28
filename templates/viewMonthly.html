@@ -1,0 +1,23 @@
+<html>
+	<title>Monthly revenue</title>
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+	<body>
+	<div>
+		<a href="/"><img src="/static/Header.png" width="550" height="150" alt="Header"></a>
+	</div>
+	<br>
+	<h1>Monthly Revenue for {{date}}</h1>
+	
+	<table border="4" width = "400">
+	<tr bgcolor='grey'>
+		<td align = 'middle'><font color="white"><strong>Revenue</strong></td>
+	</tr>
+	{% for row in rows %}
+	<tr>
+		<td align = 'middle'>${{ row[0] }}</td>
+     </tr>
+	{% endfor %}
+	
+	</form>	
+	</body>
+</html> 

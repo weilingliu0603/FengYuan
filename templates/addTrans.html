@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Add Transactions</title>
+</head>
+
+<body>
+	<div>
+		<a href = "{{url_for('homepage')}}"><img src = "{{url_for('static',filename = 'Header.png')}}" width = 550 height = 150 alt = "Header"/></a>
+	</div>
+	
+	<br>
+	<h1><strong>Add the details of the transaction here</strong></h1>
+	<br>
+	<form action="{{ url_for('transAdded')}}" method="POST">
+
+		<table>
+			<tr>
+				<input name = 'MemberID' placeholder = 'MemberID'>
+			</tr>
+			<br><br><br>
+			<tr>
+				<input name = 'Date' placeholder = 'MM-DD-YYYY'>
+			</tr>
+			<br><br>
+		</table>
+		<p>Choose the services the member has purchased:</p>
+			<input type = "radio" name = "cut" value="Cut (short)">Cut (short)
+			<input type = "radio" name = "cut" value="Cut (medium)">Cut (medium)
+			<input type = "radio" name = "cut" value="Cut (long)">Cut (long)
+			<input type = "hidden" name = "cut" value="no">
+			<br><br>
+			<input type = "radio" name = "highlight" value = "Highlight (half)">Highlight (half)
+			<input type = "radio" name = "highlight" value = "Highlight (full)">Highlight (full)
+			<input type = "hidden" name = "highlight" value = "no">
+			<br><br>
+			
+			<input type = "checkbox" name = "perm" value = "Perm">Perm
+			<input type = "hidden" name = "perm" value = "no">   
+			
+			<input type = "checkbox" name = "colour" value = "Colour">Colour
+			<input type = "hidden" name = "colour" value = "no">  
+			
+			<input type = "checkbox" name = "rebonding" value = "Rebonding">Rebonding
+			<input type = "hidden" name = "rebonding" value = "no">   
+			
+			<input type = "checkbox" name = "treatment" value = "Treatment">Treatment
+			<input type = "hidden" name = "treatment" value = "no">   
+		</select>
+		<br><br>
+	<input type = 'submit' value = 'Submit'>
+
+	</form>
+</body>
+</html>

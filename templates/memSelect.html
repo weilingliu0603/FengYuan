@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+<title>Update Member</title>
+</head>
+
+<center>
+<body>
+	<div id = "header" height = "250">
+		<a href = "{{url_for('homepage')}}"><img src = "{{url_for('static',filename = 'Header.png')}}" width = 550 height = 150 alt = "Header"/></a>
+		<br><br>
+		<p style="font-size:20px">Select the field you wish to edit and enter the value that you want to change it to</p>
+	</div>
+	<br><br><br>
+	
+	<div id = "mainContent">
+		<form action = "{{url_for('memView')}}" method = 'POST'>
+			<INPUT TYPE="radio" name = "Choice" VALUE="Name">Name
+			<INPUT TYPE="radio" name = "Choice" VALUE="Gender">Gender
+			<INPUT TYPE="radio" name = "Choice" VALUE="Email">Email
+			<INPUT TYPE="radio" name = "Choice" VALUE="Contact">Contact
+			<INPUT TYPE="radio" name = "Choice" VALUE="Address">Address
+			<br><br><br>
+			<input name = "newVal" style = "width:550px">
+			<input type = "submit" value = "Submit">
+		</form>
+	</div>
+</body>
+</center>

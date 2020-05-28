@@ -1,0 +1,35 @@
+<html>
+	<title>Daily Transactions</title>
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+	<body>
+	<div>
+		<a href="/"><img src="/static/Header.png" width="550" height="150" alt="Header"></a>
+	</div>
+	
+	<h1>Daily Transactions</h1>
+	<table border="4" width = '900'>
+	<tr bgcolor='grey'>
+		<td><font color="white"><strong>InvoiceNo</strong></td>
+		<td><font color="white"><strong>MemberID</strong></td>
+		<td><font color="white"><strong>Name</strong></td>
+		<td><font color="white"><strong>Date</strong></td>
+		<td><font color="white"><strong>Total Amount</strong></td>
+	</tr>
+	{% for row in rows %}
+	<tr>
+		<td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+		<td>{{ row[2] }}</td>
+		<td>{{ row[3] }}</td>
+		<td>{{ row[4] }}</td>
+     </tr>
+	{% endfor %}
+	
+	
+
+	</body>
+	
+	
+</html>
+
+

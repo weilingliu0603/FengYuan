@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+<title>View Existing Members</title>
+</head>
+
+<body>
+	<div id="container">
+		<div id="header" style="width:600; display:flex; justify-content: space-evenly;">
+		   <a href = "{{url_for('homepage')}}"><img src = "{{url_for('static',filename = 'Header.png')}}" width = 550 height = 150 alt = "Header"/></a>
+		</div>
+		<br>
+		<div id="mainContent" >
+				<p style="width:600; display:flex; justify-content: space-evenly;font-size:30px"><b>Viewing existing members</b></p>
+			<br>
+			<center>
+			<table border="5" style = "width:1000">
+			
+				<tr bgcolor="#0c2c4b">
+					<td><font color="white"><div align="center" style = "width:70px"><strong>Member ID</strong></div></td>
+					<td><font color="white"><div align="center" style = "width:200px"><strong>Name</strong></div></td>
+					<td><font color="white"><div align="center" style = "width:50px"><strong>Gender</strong></div></td>
+					<td><font color="white"><div align="center" style = "width:240px"><strong>Email</strong></div></td>
+					<td><font color="white"><div align="center" style = "width:120px"><strong>Contact</strong></div></td>
+					<td><font color="white"><div align="center" style = "width:350px"><strong>Address</strong></div></td>
+					</tr>
+					
+				{% for row in rows %}
+				<tr>
+					<td align = "center">{{ row['MemberID'] }}</td>
+					<td align = "center">{{ row['Name'] }}</td>
+					<td align = "center">{{ row['Gender'] }}</td>
+					<td align = "center">{{ row['Email'] }}</td>
+					<td align = "center">{{ row['Contact'] }}</td>
+					<td align = "center">{{ row['Address'] }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+			</center>
+			<center>
+			<form action = "{{url_for('memSelect')}}" method = 'POST'>
+				<p style = "font-size:30px"><b>Please enter the ID of the member you wish to edit. You may only change one field at a time.</b></p>
+				<input name = "MemberID">
+				<input type = "submit" value = "Submit">
+			</form>
+			</center>
+		</div>
+	</div>
+</body>
+</html>

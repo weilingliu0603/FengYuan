@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>View Monthly Transactions History</title>
+</head>
+
+	
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+	<body>
+	<div>
+		<a href="/"><img src="/static/Header.png" width="550" height="150" alt="Header"></a>
+	</div>	
+	<h1>Please enter the numerical value of the month as well as the year</h1>
+	<form action = '{{ url_for('viewMonthly')}}' method = 'POST'>
+	<table>
+		<tr>
+			<td><input name = 'Date' placeholder = 'MM-YYYY'></td>
+		</tr>	
+	</table>
+	<br><br>
+	<input type = 'submit' value = 'Submit'>
+	</form>
+	</body>
+</html>

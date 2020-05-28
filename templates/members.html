@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+
+<head>
+<title>Members</title>
+<link href = "{{url_for('static', filename = 'styles/members.css')}}" rel = "stylesheet">
+</head>
+
+
+<center>
+<body>
+<div id = "container">
+
+	<div id = "header" height = "250">
+		<a href = "{{url_for('homepage')}}"><img src = "{{url_for('static',filename = 'Header.png')}}" width = 550 height = 150 alt = "Header"/></a>
+	</div>
+	
+	<div id = "mainContent">
+		<text style = "font-size: 20px;color:#89163c">What would you like to do from here?</text>
+		<br><br>
+		<div style = "display:flex;justify-content: space-evenly;">
+			<a href = "{{url_for('addMem')}}"><img src = "{{url_for('static',filename = 'addMem.png')}}" width = "200" height = "200" alt = "Add Member"></a>
+			<a href = "{{url_for('requestMem')}}"><img src = "{{url_for('static', filename = 'updateMem.png')}}" width = "200" height = "180" alt = "Search Member"></a>
+			<a href = "{{url_for('memView')}}"><img src = "{{url_for('static', filename = 'viewMem.jpg')}}" width = "200" height = "200" alt = "View Members"</a>
+		</div>
+		
+		<div style = "justify-content:space-evenly;">
+			<a href = "{{url_for('addMem')}}" style = "font-size:30px">Add Member</a>
+			
+			<a href = "{{url_for('requestMem')}}" style = "font-size:30px;margin-left:350px;margin-right:350px;">Search Member</a>
+			
+			<a href = "{{url_for('memView')}}" style = "font-size:30px">View Members</a>
+		</div>
+	</div>
+</body>
+</center>

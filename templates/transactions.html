@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Transactions</title>
+</head>
+
+<style>
+			.button {
+			background-color: #0c2c4b;
+			border: none;
+			color: white;
+			padding: 20px 34px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 20px;
+			margin: 4px 2px;
+			cursor: pointer;
+			}
+		</style>
+
+<center>
+<body>
+
+		<div>
+			<a href = "{{url_for('homepage')}}"><img src = "{{url_for('static',filename = 'Header.png')}}" width = 550 height = 150 alt = "Header"/></a>
+		</div>
+		<p style = "font-color:#0c2c4b"><strong>Welcome to the transactions page! What would you like to do?</strong></p>
+	
+		
+		<table>
+			<tr>
+				
+				<td>
+				<a href="{{url_for('addTransactions')}}"><center><img src = "{{url_for('static',filename = 'addtransactions.png')}}" width = "200" height = "200" alt = "Add Transaction"></center></a>
+				</td>
+				
+				
+				<td>
+				<a href="{{url_for('direct_viewDaily')}}"><center><img src = "{{url_for('static',filename = 'dailytransactions.png')}}" width = "200" height = "200" alt = "View Daily Transaction"></center></a>
+				</td>
+			
+				<td>
+				<a href="{{url_for('direct_viewMonthly')}}"><center><img src = "{{url_for('static',filename = 'monthlytransactions.png')}}" width = "200" height = "200" alt = "View Monthly Transaction"></center></a>
+				</td>
+				
+				<td>
+				<a href="{{url_for('direct_viewMem')}}"><center><img src = "{{url_for('static',filename = 'viewMem.jpg')}}" width = "200" height = "200"alt = "View Members' Transactions"></center></a>
+				</td>
+				</center>
+			</tr>
+			
+			<tr>
+				<td>
+				<a href="{{url_for('addTransactions')}}" class="button">Add Transaction</a>
+				</td>
+				
+				<td>
+				<a href="{{url_for('direct_viewDaily')}}" class="button">View daily transactions</a>
+				</td>
+			
+				<td>
+				<a href="{{url_for('direct_viewMonthly')}}" class="button">View monthly sales revenue</a>
+				</td>
+				
+				<td>
+				<a href="{{url_for('direct_viewMem')}}" class="button">View member history</a>
+				</td>
+			</tr>		
+		
+		</table>
+		
+	
+	
+</body>
+<center>	
+	
+</html>

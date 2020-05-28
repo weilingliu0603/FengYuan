@@ -1,0 +1,31 @@
+
+
+<head>
+<title>transAdded</title>
+</head>
+
+<style>
+	.button {
+	background-color: #0c2c4b;
+	border: none;
+	color: white;
+	padding: 20px 34px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+	}
+</style>
+
+
+<body>
+	<div id = "header" height = "250">
+		<a href = "{{url_for('homepage')}}"><img src = "{{url_for('static',filename = 'Header.png')}}" width = 550 height = 150 alt = "Header"/></a>
+	</div>
+	<h1><strong>Transaction added successfully!</strong></h1>
+	<a href="http://127.0.0.1:5000/transactions" class="button">Back</a>
+</body>
+
+</html>

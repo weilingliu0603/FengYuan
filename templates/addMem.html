@@ -1,0 +1,38 @@
+<head>
+<title>Add Member</title>
+</head>
+
+<center>
+<body>
+<div id = "container">
+
+	<div id = "header" height = "250">
+		<a href = "{{url_for('homepage')}}"><img src = "{{url_for('static',filename = 'Header.png')}}" width = 550 height = 150 alt = "Header"/></a>
+	</div>
+	<br><br>
+	
+	<div id = "mainContent">
+	<p style="font-size:30px"><strong>Add the details of a new member here<strong></p><br>
+	<form action="{{ url_for('memAdded')}}" method="POST">
+		<div style = "width:600; display:flex;justify-content: space-evenly">
+			Name: <input name = 'name' style = "width:310px"> &ensp;
+			Gender:
+			<INPUT TYPE="radio" name = "gender" VALUE="M">Male
+			<INPUT TYPE="radio" name = "gender" VALUE="F">Female
+		</div>
+		<br>
+		<div style = "width:600; display:flex;justify-content: space-evenly">
+			Email: <input name = 'email' style = "width: 320px"> &ensp;
+			Contact No. : <input name = 'contactNo' style = "width: 100px">
+		</div>
+		<br>
+		<div style = "width:600; display:flex;justify-content: space-evenly">
+			Address: <input name = 'address' style = "width:520" >
+		</div>
+		<br>
+		<input type="submit" value = "Submit">
+	</form>
+	</div>
+</body>
+</center>
+</html>

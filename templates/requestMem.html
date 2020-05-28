@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+<title>Update Member</title>
+</head>
+
+<body>
+	<div style = "display:flex;justify-content: space-evenly">
+		<a href = "{{url_for('homepage')}}"><img src = "{{url_for('static',filename = 'Header.png')}}" width = 550 height = 150 alt = "Header"/></a>
+	</div>
+	
+	<br><br>
+	
+	<div style = "display:flex;justify-content: space-evenly">
+		<form action = "{{url_for('memView')}}" method = "POST">
+			<center><p style = "font-size:20px"><strong>Enter the name of the member which you want to edit the details from</strong></p></center>
+			<br>
+			<input name = "name" style= "width:550px">
+			<input type="submit" value = "Submit">
+		</form>
+	</div>
+</body>
+</html>	

@@ -1,0 +1,30 @@
+<html>
+	<title>View Member's Transaction History</title>
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+	<body>
+	<div>
+		<a href="/"><img src="/static/Header.png" width="550" height="150" alt="Header"></a>
+	</div>
+	<br>
+	<h1>Viewing member history of {{name}}</h1>
+	
+	<table border="4" width = '900'>
+	<tr bgcolor='grey'>
+		<td align = 'middle' style = "width:100px"><font color="white"><strong>InvoiceNo</strong></td>
+		<td align = 'middle' style = "width:150px"><font color="white"><strong>Date</strong></td>
+		<td align = 'middle' style = "width:100px"><font color="white"><strong>Total Amount</strong></td>
+		<td align = 'middle'><font color="white"><strong>Services</strong></td>
+
+	</tr>
+	{% for row in rows %}
+	<tr>
+		<td align = 'middle'>{{ row[0] }}</td>
+        <td align = 'middle'>{{ row[1] }}</td>
+		<td align = 'middle'>{{ row[2] }}</td>
+		<td align = 'middle'>{{ row[4] }}</td>
+     </tr>
+	{% endfor %}
+	
+	</form>	
+	</body>
+</html> 

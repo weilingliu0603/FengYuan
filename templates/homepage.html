@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+<title>Homepage</title>
+<link href = "{{url_for('static', filename = 'styles/homepage.css')}}" rel = "stylesheet">
+<head>
+
+<center>
+<body>
+<div id = "container">
+
+	<div id = "header" height = "250">
+		<a href = "{{url_for('homepage')}}"><img src = "{{url_for('static',filename = 'Header.png')}}" width = 550 height = 150 alt = "Header"/></a>
+	</div>
+	<br><br><br>
+	<div id = "mainContent">
+		<text style = "font-size: 20px;color:#89163c">Welcome to JP Salon!</text>
+		<text style = "font-size: 20px;color:#0c2c4b">Please pick one of the options below to continue.</text>
+		<br><br><br><br><br><br>
+		<div style = "display:flex;justify-content: space-evenly">
+			<a href = "{{url_for('members')}}"><img src = "{{url_for('static', filename = 'members.png')}}" width = "200" height = "200" alt = "Members"></a>
+			<a href = "{{url_for('transactions')}}"><img src = "{{url_for('static', filename = 'transactions.png')}}" width = "200" height = "200" alt = "Transactions"></a>
+		</div>
+		
+		<div style = "display:flex;justify-content: space-evenly">
+			<a href = "{{url_for('members')}}" style = "font-size:30px; width:200px">Members</a>
+			<a href = "{{url_for('transactions')}}" style = "font-size:30px; width:200px">Transactions</a>
+		</div>
+	</div>
+</body>
+</center>
+</html>

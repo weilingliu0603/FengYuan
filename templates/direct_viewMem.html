@@ -1,0 +1,19 @@
+<html>
+	<title>View Member's Transaction History</title>
+	<body>
+	<div>
+		<a href="/"><img src="/static/Header.png" width="550" height="150" alt="Header"></a>
+	</div>
+	
+	<h1>Please enter in the ID of the member you wish to view</h1>
+	<form action = "{{ url_for('viewMem')}}" method = 'POST'>
+			<table border = '4' width = '400'>
+				<tr>
+					<td><input name = 'ID' placeholder = 'ID' style ="width:400px"></td>
+				</tr>	
+			</table>
+			<br><br>
+		<input type = 'submit' value = 'Submit'>
+	</form>
+	</body>
+</html>
