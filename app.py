@@ -196,6 +196,5 @@ def viewmember():
     return flask.render_template('viewmember.html')
 
 if __name__ == '__main__':
-    app.run(port = 9730, debug = True)
+    app.run(debug=True, use_reloader=True)
 
-app.run(debug=True)
